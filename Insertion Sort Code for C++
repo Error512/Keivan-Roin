@@ -1,0 +1,39 @@
+void insertion(int kir[], int total) {
+    int var1, var2,pilih;
+    cout << "\nPilihan urutan\n1.Ascending\n2.Descending\nPilihan: "; cin >> pilih;
+    switch (pilih) {
+    case 1: {
+        for (int i = 1; i < total; i++) {
+            var1 = i - 1;
+            var2 = kir[i];
+            while (var1 >= 0 and kir[var1] > kir[var1 + 1]) {
+                kir[var1 + 1] = kir[var1];
+                kir[var1] = var2;
+                var1--;
+            }
+
+        }
+        cout << "\nAscending: ";
+        for (int b = 0; b < total; b++) {
+            cout << kir[b]<<" ";
+        }
+    }
+    case 2: {
+        for (int i = 1; i < total; i++) {
+            var1 = i - 1;
+            var2 = kir[i];
+            while (var1 >= 0 and kir[var1] < kir[var1 + 1]) {
+                kir[var1 + 1] = kir[var1];
+                kir[var1] = var2;
+                var1--;
+            }
+
+        }
+        cout << "\nDescending ";
+        for (int b = 0; b < total; b++) {
+            cout << kir[b]<<" ";
+        }
+    }
+    }
+}
+
